@@ -1,0 +1,90 @@
+@import '../variables/colors';
+
+.testimonial-container {
+    padding: 50px 25px;
+}
+
+.testimonial {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 0 0 30px;
+    max-width: 800px;
+    border-left: 2px solid $orange;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $orange;
+      transform: translate(-60%, 50%);
+      bottom: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    &::before {
+      content: "\201C";
+      position: absolute;
+      background-color : $orange;
+      color: $white;
+      text-align: center;
+      font-size: 55px;
+      transform: translate(-50%, -110%);
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+
+    &__content {
+      flex: 1;
+      font-size: 20px;
+    }
+
+    &__paragraph {
+      margin-top: 0;
+    }
+    
+    &__source {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    
+    &__btn {
+      background-color: $light-blue;
+      color: $white;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 20px 30px;
+      border-radius: 4px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all .2s;
+
+      &:hover {
+          background-color: $dark-blue;
+      }
+    }
+}
+  
+@media (max-width: 600px) {
+  .testimonial {
+    display: block;
+
+    &__btn  {
+      display: block;
+      max-width: fit-content;
+      margin-top: 10px;
+    }
+  }
+}
+  
+  
+  
+  
