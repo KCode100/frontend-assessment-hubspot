@@ -15,7 +15,7 @@ const Grid = ({ filteredMedia, error }) => {
                     <p className="media__genres">
                         Genres:
                         {media.genre.map(category => (
-                            <span> {category}, </span>
+                            <span> {category}</span>
                         ))}
                     </p>
                 </div>

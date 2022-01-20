@@ -22,11 +22,13 @@ const Media = () => {
         }
     }
 
+    // Movies/Books filter
     const filterByType = (e) => {
         const filteredList = mediaData.filter(media => media.type === e.target.value)
         setFilteredMedia(filteredList)
     }
 
+    // Reset results to original state
     const clearFilters = () => {
         setFilteredMedia(mediaData)
     }
